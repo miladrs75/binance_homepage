@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/globalStyles.css" />
+    <link rel="stylesheet" href="styles/header/mobileHeader.css" />
+    <link rel="stylesheet" href="styles/header/desktopHeader.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header--mobile">
+        <button class="menu-btn svg-btn">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.85156 19.0312H20.9316"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            />
+            <path
+              d="M2.85156 12H20.9316"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            />
+            <path
+              d="M2.85156 5.07812H20.9316"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="header--mobile__signup-btns">
+          <button class="primary-button">Sign Up</button>
+          <button class="secondary-button">Log in</button>
+        </div>
+        <div class="header--mobile__menu">
+          <button class="close-btn svg-btn">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke="currentColor"
+                d="M6.697 4.575L4.575 6.697 9.88 12l-5.304 5.303 2.122 2.122L12 14.12l5.303 5.304 2.122-2.122L14.12 12l5.304-5.303-2.122-2.122L12 9.88 6.697 4.575z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+          <div class="header--mobile__signup-btns" style="margin: 16px 0">
+            <button class="primary-button" style="flex: 1">Sign Up</button>
+            <button class="secondary-button" style="flex: 1">Log In</button>
+          </div>
+          <input
+            type="text"
+            placeholder="Coin, Function, Announcement"
+            class="header--mobile__menu-input"
+          />
+          <ul class="header--mobile__menu-accordion"></ul>
+          <div class="theme-option">
+            <button class="svg-btn theme-btn">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_1_1586)">
+                  <path
+                    d="M10.0006 14.6106C12.5467 14.6106 14.6106 12.5467 14.6106 10.0006C14.6106 7.45459 12.5467 5.39062 10.0006 5.39062C7.45459 5.39062 5.39062 7.45459 5.39062 10.0006C5.39062 12.5467 7.45459 14.6106 10.0006 14.6106Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M2.48307 15.5515L4.26562 17.375L6.18205 15.5016L4.3995 13.6781L2.48307 15.5515Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M0.755491 8.61398L0.726562 11.1638L3.40639 11.1942L3.43532 8.64439L0.755491 8.61398Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M4.44065 2.49089L2.61719 4.27344L4.49061 6.18986L6.31407 4.40731L4.44065 2.49089Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.378 0.755491L8.82812 0.726562L8.79772 3.40639L11.3476 3.43532L11.378 0.755491Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M17.5091 4.44846L15.7266 2.625L13.8101 4.49843L15.5927 6.32189L17.5091 4.44846Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M19.2445 11.378L19.2734 8.82812L16.5936 8.79772L16.5647 11.3476L19.2445 11.378Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M15.5594 17.5091L17.3828 15.7266L15.5094 13.8101L13.6859 15.5927L15.5594 17.5091Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M8.60641 19.2445L11.1562 19.2734L11.1867 16.5936L8.63682 16.5647L8.60641 19.2445Z"
+                    fill="currentColor"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_1586">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <span>Theme</span>
+          </div>
+        </div>
+      </div>
+      <div class="header--desktop">
+        <ul class="header--desktop__menu"></ul>
+        <div class="header--desktop__btns">
+          <button class="secondary-button">Log In</button>
+          <button class="primary-button">Sign Up</button>
+          <button class="svg-btn theme-btn">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1_1586)">
+                <path
+                  d="M10.0006 14.6106C12.5467 14.6106 14.6106 12.5467 14.6106 10.0006C14.6106 7.45459 12.5467 5.39062 10.0006 5.39062C7.45459 5.39062 5.39062 7.45459 5.39062 10.0006C5.39062 12.5467 7.45459 14.6106 10.0006 14.6106Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M2.48307 15.5515L4.26562 17.375L6.18205 15.5016L4.3995 13.6781L2.48307 15.5515Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M0.755491 8.61398L0.726562 11.1638L3.40639 11.1942L3.43532 8.64439L0.755491 8.61398Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M4.44065 2.49089L2.61719 4.27344L4.49061 6.18986L6.31407 4.40731L4.44065 2.49089Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M11.378 0.755491L8.82812 0.726562L8.79772 3.40639L11.3476 3.43532L11.378 0.755491Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M17.5091 4.44846L15.7266 2.625L13.8101 4.49843L15.5927 6.32189L17.5091 4.44846Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M19.2445 11.378L19.2734 8.82812L16.5936 8.79772L16.5647 11.3476L19.2445 11.378Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M15.5594 17.5091L17.3828 15.7266L15.5094 13.8101L13.6859 15.5927L15.5594 17.5091Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M8.60641 19.2445L11.1562 19.2734L11.1867 16.5936L8.63682 16.5647L8.60641 19.2445Z"
+                  fill="currentColor"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_1586">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script
+    type="module"
+    src="./components/header/mobile/mobileHeader.js"
+  ></script>
+  <script
+    type="module"
+    src="./components/header/desktop/desktopHeader.js"
+  ></script>
+  <script src="./components/header/theme.js"></script>
+</html>
