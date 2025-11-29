@@ -1,0 +1,75 @@
+:root {
+  /* primary palette */
+  --primary-100: #fdee97;
+  --primary-200: #fce663;
+  --primary-300: #fce249;
+  --primary-400: #fce03c;
+  --primary-500: #fbdd2e;
+  --primary-600: #ecd02c;
+  --primary-700: #dcc229;
+  --primary-800: #bda623;
+  --primary-900: #7e6f17;
+
+  /* secondary palette */
+  --secondary-100: #ebd48e;
+  --secondary-200: #e1be55;
+  --secondary-300: #dcb339;
+  --secondary-400: #daae2b;
+  --secondary-500: #d7a81c;
+  --secondary-600: #ca9e1b;
+  --secondary-700: #bd9319;
+  --secondary-800: #a27e15;
+  --secondary-900: #6c540e;
+
+  /* white palette */
+  --white-0: #ffffff;
+  --white-100: #f9fafb;
+  --white-200: #f3f3f4;
+  --white-300: #e8e9e9;
+  --white-400: #dcdee0;
+  --white-500: #cfd3d6;
+  --white-600: #c6cacd;
+  --white-700: #b9bdc1;
+  --white-800: #a1a8ad;
+  --white-900: #90999e;
+
+  /* gray palette */
+  --gray-0: #90999e;
+  --gray-100: #798084;
+  --gray-200: #575c5e;
+  --gray-300: #484d4f;
+  --gray-400: #3f4446;
+  --gray-500: #34373a;
+  --gray-600: #292b2d;
+  --gray-700: #222426;
+  --gray-800: #1a1d1e;
+  --gray-900: #131415;
+
+   --shadow-color: 0, 0, 0, 0.15;
+}
+
+:root.dark {
+  --white-900: #90999e;
+  --white-800: #798084;
+  --white-700: #575c5e;
+  --white-600: #484d4f;
+  --white-500: #3f4446;
+  --white-400: #34373a;
+  --white-300: #292b2d;
+  --white-200: #222426;
+  --white-100: #1a1d1e;
+  --white-0: #131415;
+
+  --gray-900: #ffffff;
+  --gray-800: #f9fafb;
+  --gray-700: #f3f3f4;
+  --gray-600: #e8e9e9;
+  --gray-500: #dcdee0;
+  --gray-400: #cfd3d6;
+  --gray-300: #c6cacd;
+  --gray-200: #b9bdc1;
+  --gray-100: #a1a8ad;
+  --gray-0: #90999e;
+
+   --shadow-color: 255, 255, 255, 0.1;
+}
