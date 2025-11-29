@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "BinanceNova";
+  src: url("../assets/fonts/BinanceNova-Medium.woff2");
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white-0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BinanceNova", Arial, Helvetica, sans-serif;
+}
+
+.primary-button {
+  background-color: var(--primary-500);
+  color: var(--gray-900);
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.secondary-button {
+  background-color: var(--white-300);
+  color: var(--gray-900);
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.svg-btn {
+  background-color: transparent;
+  color: var(--gray-500);
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
