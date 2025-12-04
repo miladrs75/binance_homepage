@@ -1,6 +1,9 @@
 header {
   width: 100vw;
   background-color: var(--white-0);
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .header--mobile {
@@ -45,17 +48,6 @@ header {
   opacity: 1;
   pointer-events: all;
   transition: all 0.3s;
-}
-
-.header--mobile__menu-input {
-  border: 1px solid var(--white-500);
-  outline: none;
-  width: 100%;
-  border-radius: 6px;
-  padding: 12px;
-  direction: ltr;
-  color: var(--gray-800);
-  margin-bottom: 30px;
 }
 
 .header--mobile__menu-accordion {
