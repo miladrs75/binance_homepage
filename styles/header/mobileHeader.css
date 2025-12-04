@@ -42,6 +42,8 @@ header {
   overflow: auto;
   scrollbar-width: none;
   transition: all 0.3s;
+  z-index: 9999;
+  margin-bottom: 1000px;
 }
 
 .header--mobile__menu.active {
