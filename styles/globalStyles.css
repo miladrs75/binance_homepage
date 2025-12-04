@@ -8,7 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--white-0);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 * {
@@ -69,5 +69,5 @@ body {
 
 .container {
   background-color: var(--white-0);
-  max-width: 1200px;
+  max-width: 1400px;
 }
