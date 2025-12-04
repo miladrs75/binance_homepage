@@ -3,12 +3,20 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 96px;
   width: 100vw;
   background-color: var(--white-0);
   margin-top: 88px;
   padding: 0 16px;
 }
 
+@media (max-width: 768px) {
+  main {
+    gap: 32px;
+  }
+}
+
+/* hero title section */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -51,8 +59,6 @@ main {
   gap: 4px;
 }
 
-
-
 @media (min-width: 768px) {
   .hero-section {
     flex-direction: row;
@@ -84,6 +90,7 @@ main {
     max-width: 50%;
   }
 }
+
 
 .popular-coins .popular-coins--header {
   display: flex;
@@ -130,10 +137,6 @@ main {
   gap: 3px;
 }
 
-.coins-symbol > img {
-  transform: translateY(2px);
-}
-
 .coins-symbol > .coin-symbol {
   font-size: 14px;
   font-weight: 500;
@@ -143,4 +146,60 @@ main {
   font-size: 12px;
   font-weight: 400;
   color: var(--white-900);
+}
+
+/* why us section */
+.why-us {
+  color: var(--gray-900);
+  padding: 16px;
+  width: 100%;
+}
+
+.why-us--header {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-us--body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.why-us--body > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-us--body-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.why-us--body > div > .why-us--body-item:last-child {
+  text-align: end;
+}
+
+.why-us--body-item > span:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-200);
+}
+
+@media(min-width: 768px) {
+  .why-us--body {
+    flex-direction: row;
+  }
+
+  .why-us--body > div {
+    flex: 1;
+  }
+
+  .why-us--body-item {
+    flex: 1;
+    align-items: center;
+  }
 }
