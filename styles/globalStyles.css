@@ -8,6 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: var(--white-0);
+  overflow: hidden;
 }
 
 * {
@@ -25,6 +26,10 @@ body {
   outline: none;
   border-radius: 6px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .secondary-button {
@@ -35,6 +40,10 @@ body {
   outline: none;
   border-radius: 6px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .svg-btn {
@@ -46,4 +55,19 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.input {
+  border: 1px solid var(--white-500);
+  outline: none;
+  width: 100%;
+  border-radius: 6px;
+  padding: 12px;
+  direction: ltr;
+  color: var(--gray-800);
+}
+
+.container {
+  background-color: var(--white-0);
+  max-width: 1200px;
 }
