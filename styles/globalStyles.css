@@ -9,6 +9,12 @@ body {
   height: 100vh;
   background-color: var(--white-0);
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
@@ -64,7 +70,7 @@ body {
   border-radius: 6px;
   padding: 12px;
   direction: ltr;
-  color: var(--gray-800);
+  color: #1a1d1e;
 }
 
 .container {
