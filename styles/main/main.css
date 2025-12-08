@@ -16,7 +16,7 @@ main {
   }
 }
 
-/* hero title section */
+/* HERO SECTION */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -44,21 +44,6 @@ main {
   vertical-align: middle;
 }
 
-.main--signup {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.main--signup .input {
-  flex: 1;
-}
-
-.main--signup .secondary-button {
-  display: flex;
-  gap: 4px;
-}
-
 @media (min-width: 768px) {
   .hero-section {
     flex-direction: row;
@@ -68,29 +53,51 @@ main {
   .hero-title {
     max-width: 70%;
   }
+}
 
+/* SIGNUP SECTION */
+.main--signup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main--signup .input {
+  min-width: 150px;
+  flex: 1;
+}
+
+.main--signup .secondary-button {
+  display: flex;
+  gap: 4px;
+}
+
+@media (min-width: 768px) {
   .main--signup {
     flex-direction: row;
     gap: 8px;
   }
 
   .main--signup .primary-button {
-    min-width: 222px;
+    flex: 1;
   }
 
   .main--signup > .secondary-button > span {
     display: none;
   }
+}
 
-  .popular-coins {
+/* POPULAR COINS */
+
+@media (min-width: 768px) {
+  .hero-section .popular-coins {
     border: 1px solid var(--white-200);
     padding: 8px 16px;
     border-radius: 6px;
-    min-width: 350px;
+    min-width: 360px;
     max-width: 50%;
   }
 }
-
 
 .popular-coins .popular-coins--header {
   display: flex;
@@ -129,12 +136,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 
 .coins-symbol {
   display: flex;
   align-items: center;
   gap: 3px;
+  flex: 1;
+  color: var(--gray-600);
 }
 
 .coins-symbol > .coin-symbol {
@@ -143,12 +153,21 @@ main {
 }
 
 .coins-symbol > .coin-name {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   color: var(--white-900);
 }
 
-/* why us section */
+.coin-price,
+.coin-changes {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+  text-align: end;
+  color: var(--gray-600);
+}
+
+/* WHY US SECTION */
 .why-us {
   color: var(--gray-900);
   padding: 16px;
@@ -189,7 +208,7 @@ main {
   color: var(--gray-200);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .why-us--body {
     flex-direction: row;
   }
@@ -201,5 +220,143 @@ main {
   .why-us--body-item {
     flex: 1;
     align-items: center;
+  }
+}
+
+/* LIVE CRYPTO SECTION */
+.live-crypto {
+  color: var(--gray-900);
+  width: 100%;
+}
+
+.live-crypto--header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.live-crypto--header h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.live-crypto--header span {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-200);
+}
+
+.live-crypto--body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.live-crypto--list .popular-coins--section.active {
+  display: block;
+}
+
+.live-crypto--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coin-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+}
+
+.coin-row--left {
+  display: flex;
+  flex: 1;
+}
+
+.coin-views {
+  font-size: 12px;
+  color: var(--gray-0);
+}
+
+.coin-row--right {
+  display: flex;
+  flex: 1;
+}
+
+.coin-trade {
+  width: 33%;
+  text-align: end;
+}
+
+.coin-trade a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--secondary-500);
+}
+
+.top-gainers--desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .live-crypto--body {
+    flex-direction: row;
+  }
+
+  .live-crypto--body > .live-crypto--box:first-child {
+    width: 60%;
+    background-color: var(--white-100);
+    padding: 16px;
+    border-radius: 6px;
+  }
+  
+  .live-crypto--body > .live-crypto--box:last-child {
+    width: 40%;
+  }
+
+  .live-crypto--body > .live-crypto--box:last-child .coin-changes {
+    flex: 1;
+  }
+
+  .top-gainers--mobile {
+    display: none;
+  }
+
+  .top-gainers--desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .top-gainers--desktop > div{
+    background-color: var(--white-100);
+    padding: 16px;
+    border-radius: 6px;
+  }
+
+  .popular-coins--header > span {
+    line-height: 26px;
+  } 
+
+  .coin-row--right,
+  .coin-row--left {
+    justify-content: space-around;
+  }
+
+  .coin-row--right .coin-changes,
+  .coin-row--left .coin-price {
+    flex: 0;
+  }
+
+  .live-crypto--item > .coin-row {
+    flex-direction: row;
+  }
+
+  .coin-trade {
+    flex: 0;
   }
 }
