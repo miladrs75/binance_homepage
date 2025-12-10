@@ -75,6 +75,8 @@ body::-webkit-scrollbar {
 
 .container {
   background-color: var(--white-0);
+  color: var(--gray-900);
+  width: 100%;
   max-width: 1400px;
 }
 
@@ -82,4 +84,12 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+}
+
+.trade-link {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--secondary-500);
+  text-align: end;
 }
