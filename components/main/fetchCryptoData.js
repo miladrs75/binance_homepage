@@ -29,7 +29,7 @@ function createCoinHTML(coin, mode) {
           <span class="coin-changes">${coin.change}%</span>
         </div>
       </div>
-      <span class="coin-trade"><a href="#">Trade</a></span>
+      <span class="coin-trade"><a href="#" class="trade-link">Trade</a></span>
     `;
   }
 
@@ -79,4 +79,3 @@ export function fetchCrypto(ulId, n, n2, mode) {
     })
     .catch(err => console.error("Error fetching data:", err));
 }
-// fetchCrypto(liveList, 5, 5, "live");
