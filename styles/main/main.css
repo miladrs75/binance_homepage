@@ -417,3 +417,79 @@ main {
     display: none;
   }
 }
+
+/* APP DOWNLOAD SECTION */
+.app-download--body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.app-download--images {
+  display: flex;
+  gap: 24px;
+}
+
+.app-download--images > div:last-child {
+  display: none;
+}
+
+.app-download--links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.qr-code {
+  border: 1px solid var(--white-400);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.links > a {
+  text-decoration: none;
+  background-color: var(--white-300);
+  color: var(--gray-900);
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  white-space: nowrap;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .app-download--body {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .app-download--images > div:last-child {
+    display: block;
+  }
+
+  .app-download--links {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 24px;
+    width: auto;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+}
