@@ -2,6 +2,7 @@ import { activeTabs } from "./activePopularCoinsTabs.js";
 import { fetchCrypto } from "./fetchCryptoData.js";
 import { renderSlideImages } from "./carousel.js";
 import { updateCarouselIndicators } from "./carousel.js";
+import { renderAppDownloadImages } from "./appDownload.js";
 
 const popularCoins = document.querySelectorAll(".popular-coins");
 const hotFutures = document.querySelector("#hot-futures--list > ul");
@@ -19,6 +20,7 @@ const topGainersDesktop = document.querySelector(
 const slideImages = document.querySelectorAll(".carousel-slide--image");
 const carousel = document.querySelector(".advanced-tools--carousel");
 const indicators = document.querySelectorAll(".indicator");
+const appDownloadImages = document.querySelectorAll(".app-download--images div");
 
 activeTabs(popularCoins);
 fetchCrypto(hotFutures, 0, 5, "popular");
@@ -36,3 +38,5 @@ fetchCrypto(topGainersDesktop, 42, 3, "topGainers");
 
 renderSlideImages(slideImages);
 updateCarouselIndicators(carousel, indicators);
+
+renderAppDownloadImages(appDownloadImages);
