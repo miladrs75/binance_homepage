@@ -21,8 +21,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
-  color: var(--gray-900);
 }
 
 .hero-title {
@@ -87,7 +85,7 @@ main {
   }
 }
 
-/* POPULAR COINS */
+/* POPULAR COINS SECTION */
 
 @media (min-width: 768px) {
   .hero-section .popular-coins {
@@ -114,6 +112,10 @@ main {
 
 .popular-coins--header .popular-coins--tab.active {
   border-bottom: 2px solid var(--secondary-500);
+}
+
+.popular-coins--tab:hover {
+  border-bottom: 2px solid var(--secondary-100);
 }
 
 .popular-coins--section {
@@ -168,16 +170,7 @@ main {
 }
 
 /* WHY US SECTION */
-.why-us {
-  color: var(--gray-900);
-  padding: 16px;
-  width: 100%;
-}
-
 .why-us--header {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -224,22 +217,12 @@ main {
 }
 
 /* LIVE CRYPTO SECTION */
-.live-crypto {
-  color: var(--gray-900);
-  width: 100%;
-}
-
 .live-crypto--header {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   margin-bottom: 40px;
-}
-
-.live-crypto--header h2 {
-  font-size: 24px;
-  font-weight: 700;
 }
 
 .live-crypto--header span {
@@ -291,13 +274,6 @@ main {
   text-align: end;
 }
 
-.coin-trade a {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--secondary-500);
-}
-
 .top-gainers--desktop {
   display: none;
 }
@@ -313,7 +289,7 @@ main {
     padding: 16px;
     border-radius: 6px;
   }
-  
+
   .live-crypto--body > .live-crypto--box:last-child {
     width: 40%;
   }
@@ -332,7 +308,7 @@ main {
     gap: 20px;
   }
 
-  .top-gainers--desktop > div{
+  .top-gainers--desktop > div {
     background-color: var(--white-100);
     padding: 16px;
     border-radius: 6px;
@@ -340,7 +316,7 @@ main {
 
   .popular-coins--header > span {
     line-height: 26px;
-  } 
+  }
 
   .coin-row--right,
   .coin-row--left {
@@ -358,5 +334,86 @@ main {
 
   .coin-trade {
     flex: 0;
+  }
+}
+
+/* advanced-tools SECTION */
+.advanced-tools h2 {
+  margin-bottom: 40px;
+}
+
+.advanced-tools--body {
+  width: 100%;
+}
+
+.advanced-tools--carousel {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.advanced-tools--carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--white-100);
+  padding: 16px;
+  border-radius: 16px;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-slide--image {
+  text-align: center;
+}
+
+.carousel-slide h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.carousel-slide p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.indicator {
+  width: 16px;
+  height: 4px;
+  border-radius: 6px;
+  background-color: var(--gray-100);
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 24px;
+  background-color: var(--gray-900);
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    flex: 1;
+  }
+
+  .carousel-indicators {
+    display: none;
   }
 }
