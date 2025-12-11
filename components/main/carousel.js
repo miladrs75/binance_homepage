@@ -104,16 +104,16 @@ export function renderSlideImages(slideImages) {
   });
 }
 
-export function updateCarouselIndicators(carousel, indicators) {
+export function updateCarouselIndicators(carousels, indicators) {
   function handleScroll() {
-    const slideWidth = carousel.offsetWidth;
-    const index = Math.round(carousel.scrollLeft / slideWidth);
+    const slideWidth = carousels.offsetWidth;
+    const index = Math.round(carousels.scrollLeft / slideWidth);
 
     indicators.forEach((dot, i) => {
       dot.classList.toggle("active", i === index);
     });
   }
 
-  carousel.addEventListener("scroll", handleScroll);
+  carousels.addEventListener("scroll", handleScroll);
 
 }
