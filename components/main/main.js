@@ -18,9 +18,10 @@ const topGainersDesktop = document.querySelector(
   "#top-gainers--list--desktop > ul"
 );
 const slideImages = document.querySelectorAll(".carousel-slide--image");
-const carousel = document.querySelector(".advanced-tools--carousel");
-const indicators = document.querySelectorAll(".indicator");
-const appDownloadImages = document.querySelectorAll(".app-download--images div");
+const carousels = document.querySelectorAll(".carousel-box");
+const appDownloadImages = document.querySelectorAll(
+  ".app-download--images div"
+);
 
 activeTabs(popularCoins);
 fetchCrypto(hotFutures, 0, 5, "popular");
@@ -37,6 +38,11 @@ fetchCrypto(topLosersDesktop, 0, 3, "topGainers");
 fetchCrypto(topGainersDesktop, 42, 3, "topGainers");
 
 renderSlideImages(slideImages);
-updateCarouselIndicators(carousel, indicators);
+carousels.forEach((carouselSection) => {
+  const carousel = carouselSection.querySelector(".carousel");
+  const indicators = carouselSection.querySelectorAll(".indicator");
+
+  updateCarouselIndicators(carousel, indicators);
+});
 
 renderAppDownloadImages(appDownloadImages);
