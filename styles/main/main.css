@@ -346,7 +346,7 @@ main {
   width: 100%;
 }
 
-.advanced-tools--carousel {
+.carousel {
   display: flex;
   gap: 20px;
   width: 100%;
@@ -356,7 +356,7 @@ main {
   -ms-overflow-style: none;
 }
 
-.advanced-tools--carousel::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none;
 }
 
@@ -492,4 +492,9 @@ main {
   .links {
     flex-direction: column;
   }
+}
+
+/* WHY TRUST US SECTION */
+.why-trust-us > h2 {
+  margin-bottom: 40px;
 }
