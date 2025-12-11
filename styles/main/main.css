@@ -149,6 +149,10 @@ main {
   color: var(--gray-600);
 }
 
+.coins-symbol > img {
+  transform: translateY(2px);
+}
+
 .coins-symbol > .coin-symbol {
   font-size: 14px;
   font-weight: 500;
@@ -497,4 +501,33 @@ main {
 /* WHY TRUST US SECTION */
 .why-trust-us > h2 {
   margin-bottom: 40px;
+}
+
+.why-trust-us article {
+  align-items: center;
+}
+
+/* WHAT ABOUT US SECTION */
+.what-about-us > h2 {
+  margin-bottom: 40px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-info > svg {
+  transform: translateY(2px);
+}
+
+.user-comment {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-100);
+}
+
+.what-about-us article {
+  gap: 24px;
 }
