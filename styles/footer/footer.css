@@ -1,0 +1,90 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+  width: 100vw;
+  background-color: var(--white-0);
+  margin-top: 88px;
+  padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    gap: 32px;
+  }
+}
+
+/* START TODAY SECTION */
+.start-today {
+  background-color: var(--white-200);
+  color: var(--gray-900);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.start-today > .primary-button {
+  padding: 10px 40px;
+}
+
+/* WHAT IS BTC SECTION */
+.what-is-btc > h2 {
+  margin-bottom: 40px;
+  text-align: start;
+}
+
+.btc-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.content {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.content.active {
+  height: max-content;
+  overflow: unset;
+}
+
+.blur-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background-color: var(--white-0);
+  filter: blur(12px);
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+.blur-layer.active {
+  display: none;
+}
+
+.content > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.toggle-btn {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--secondary-500);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
