@@ -1,12 +1,12 @@
-export function toggleBitcoinInfo(toggleBtn,btcContent,blurLayer) {
-  toggleBtn.addEventListener("click", () => {
+export function toggleBitcoinInfo(btcContentToggleBtn,btcContent,blurLayer) {
+  btcContentToggleBtn.addEventListener("click", () => {
     btcContent.classList.toggle("active");
 
     if (btcContent.classList.contains("active")) {
-      toggleBtn.innerText = "Show Less";
+      btcContentToggleBtn.innerText = "Show Less";
       blurLayer.classList.add("active");
     } else {
-      toggleBtn.innerText = "Show More";
+      btcContentToggleBtn.innerText = "Show More";
       blurLayer.classList.remove("active");
     }
   });
