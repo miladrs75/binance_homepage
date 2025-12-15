@@ -24,18 +24,23 @@ const appDownloadImages = document.querySelectorAll(
 );
 
 activeTabs(popularCoins);
+
 fetchCrypto(hotFutures, 0, 5, "popular");
-// setInterval(() => fetchCrypto(hotFutures, 0, 5), 30000);
+setInterval(() => fetchCrypto(hotFutures, 0, 5, "popular"), 30000);
 fetchCrypto(newlyAdded, 5, 5, "popular");
-// setInterval(() => fetchCrypto(newlyAdded, 5, 5), 30000);
+setInterval(() => fetchCrypto(newlyAdded, 5, 5, "popular"), 30000);
 fetchCrypto(topVolum, 0, 11, "live");
-// setInterval(() => fetchCrypto(topVolum, 0, 8), 30000);
+setInterval(() => fetchCrypto(topVolum, 0, 11, "live"), 30000);
 fetchCrypto(hotTokes, 11, 11, "live");
-// setInterval(() => fetchCrypto(hotTokes, 8, 8), 30000);
+setInterval(() => fetchCrypto(hotTokes, 11, 11, "live"), 30000);
 fetchCrypto(topLosers, 0, 3, "topGainers");
+setInterval(() => fetchCrypto(topLosers, 0, 3, "topGainers"), 30000);
 fetchCrypto(topGainers, 42, 3, "topGainers");
+setInterval(() => fetchCrypto(topGainers, 42, 3, "topGainers"), 30000);
 fetchCrypto(topLosersDesktop, 0, 3, "topGainers");
+setInterval(() => fetchCrypto(topLosersDesktop, 0, 3, "topGainers"), 30000);
 fetchCrypto(topGainersDesktop, 42, 3, "topGainers");
+setInterval(() => fetchCrypto(topGainersDesktop, 42, 3, "topGainers"), 30000);
 
 renderSlideImages(slideImages);
 carousels.forEach((carouselSection) => {
