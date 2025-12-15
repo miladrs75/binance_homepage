@@ -23,4 +23,4 @@ It is built to demonstrate my skills in responsive design, clean UI implementati
 
 ## 🚀 Live Demo
 
-https://miladrs75.github.io/binance_homepage/
+[View Live](https://miladrs75.github.io/binance_homepage/)
