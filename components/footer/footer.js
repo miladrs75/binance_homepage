@@ -1,15 +1,11 @@
+import { toggleBitcoinInfo } from "./bitcoinInfo.js";
+import { handleFaqAccordionToggle } from "./faq.js";
+
 const btcContent = document.querySelector(".content");
 const toggleBtn = document.querySelector(".toggle-btn");
 const blurLayer = document.querySelector(".blur-layer");
+const questions = document.querySelectorAll(".faq-header");
 
-toggleBtn.addEventListener("click", () => {
-  btcContent.classList.toggle("active");
+toggleBitcoinInfo(toggleBtn, btcContent, blurLayer);
 
-  if (btcContent.classList.contains("active")) {
-    toggleBtn.innerText = "Show Less";
-    blurLayer.classList.add("active");
-} else {
-    toggleBtn.innerText = "Show More";
-    blurLayer.classList.remove("active");
-  }
-});
+handleFaqAccordionToggle(questions);
