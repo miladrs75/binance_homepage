@@ -50,13 +50,11 @@ footer {
   position: relative;
   height: 190px;
   overflow: hidden;
-  transition: all 0.5s ease;
 }
 
 .content.active {
-  height: 350px;
+  height: max-content;
   overflow: unset;
-  transition: all 0.2s ease;
 }
 
 .blur-layer {
@@ -91,12 +89,12 @@ footer {
 }
 
 /* QUESTIONS SECTION */
-.questions > h2 {
+.faq > h2 {
   margin-bottom: 40px;
   text-align: start;
 }
 
-.question-item {
+.faq-item {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -105,23 +103,27 @@ footer {
   border-radius: 16px;
 }
 
-.question-item.active {
+.faq-item.active {
   background-color: var(--white-200);
-} 
+}
 
-.question-header {
+.faq-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
-.question-header > span {
+.faq-header:hover > span {
+  color: var(--secondary-500);
+}
+
+.faq-header > span {
   font-size: 18px;
   font-weight: 400;
 }
 
-.question-header > button {
+.faq-header > button {
   border: none;
   outline: none;
   background-color: transparent;
@@ -137,4 +139,95 @@ footer {
 
 .answer.active {
   display: block;
+}
+
+/* FOOTER NAV SECTION */
+.nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-column {
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-column > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.nav-column > div > svg {
+  transform: translateY(4px);
+}
+
+.nav-list {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.nav-list.active {
+  display: flex;
+}
+
+.nav-item {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: var(--gray-300);
+}
+
+.nav-item > a:hover {
+  color: var(--secondary-500);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav-column {
+    flex-wrap: wrap;
+  }
+
+  .nav-column > div {
+    cursor: context-menu;
+  }
+
+  .nav-column > div > svg {
+    display: none;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 8px 0;
+  }
+}
+
+/* COPYRIGHT SECTION */
+.copyright {
+  text-align: center;
+  padding: 20px 0 50px;
+  border-top: 1px solid var(--white-200);
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-300);
 }
