@@ -45,7 +45,7 @@
   --gray-800: #1a1d1e;
   --gray-900: #131415;
 
-   --shadow-color: 0, 0, 0, 0.15;
+  --shadow-color: 0, 0, 0, 0.15;
 }
 
 :root.dark {
@@ -71,5 +71,7 @@
   --gray-100: #a1a8ad;
   --gray-0: #90999e;
 
-   --shadow-color: 255, 255, 255, 0.1;
+  --shadow-color: 255, 255, 255, 0.1;
+
+  --primary-500: #daae2b;
 }
