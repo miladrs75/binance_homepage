@@ -36,6 +36,12 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-600);
+  transition: all 0.3s ease;
 }
 
 .secondary-button {
@@ -50,6 +56,12 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: var(--white-400);
+  transition: all 0.3s ease;
 }
 
 .svg-btn {
