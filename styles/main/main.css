@@ -144,7 +144,7 @@ main {
 .coins-symbol {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   flex: 1;
   color: var(--gray-600);
 }
@@ -162,6 +162,7 @@ main {
   font-size: 10px;
   font-weight: 400;
   color: var(--white-900);
+  transform: translateY(1px);
 }
 
 .coin-price,
