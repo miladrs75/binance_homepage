@@ -135,12 +135,20 @@ footer {
 }
 
 .answer {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
   color: var(--gray-300);
 }
 
 .answer.active {
-  display: block;
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.answer > div {
+  overflow: hidden;
 }
 
 /* FOOTER NAV SECTION */
