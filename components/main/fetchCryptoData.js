@@ -1,16 +1,29 @@
+let coinCache = [];
+
+function baseCoinRow(coin, price, extraRight = "") {
+  return `
+    <div class="coin-row--left">
+      <div class="coins-symbol">
+        <img src="${coin.iconUrl}" alt="${coin.name}" width="16" height="16" />
+        <span class="coin-symbol">${coin.symbol}</span>
+        <span class="coin-name">${coin.name}</span>
+      </div>
+      <span class="coin-price">$${price.toFixed(2)}</span>
+    </div>
+    <div class="coin-row--right">
+      ${extraRight}
+      <span class="coin-changes">${coin.change}%</span>
+    </div>
+  `;
+}
+
 function createCoinHTML(coin, mode) {
+  const price = Number(coin.price) || 0;
+
   if (mode === "popular") {
     return `
       <a href="#" class="popular-coins--item">
-        <div class="coins-symbol">
-          <img src="${coin.iconUrl}" alt="${
-      coin.name
-    }" width="16" height="16" />
-          <span class="coin-symbol">${coin.symbol}</span>
-          <span class="coin-name">${coin.name}</span>
-        </div>
-        <span class="coin-price">$${Number(coin.price).toFixed(2)}</span>
-        <span class="coin-changes">${coin.change}%</span>
+        ${baseCoinRow(coin, price)}
       </a>
     `;
   }
@@ -18,20 +31,7 @@ function createCoinHTML(coin, mode) {
   if (mode === "live") {
     return `
       <div class="coin-row">
-        <div class="coin-row--left">
-          <div class="coins-symbol">
-            <img src="${coin.iconUrl}" alt="${
-      coin.name
-    }" width="16" height="16" />
-            <span class="coin-symbol">${coin.symbol}</span>
-            <span class="coin-name">${coin.name}</span>
-          </div>
-          <span class="coin-price">$${Number(coin.price).toFixed(2)}</span>
-        </div>
-        <div class="coin-row--right">
-          <span class="coin-views">28M</span>
-          <span class="coin-changes">${coin.change}%</span>
-        </div>
+        ${baseCoinRow(coin, price, `<span class="coin-views">28M</span>`)}
       </div>
       <span class="coin-trade"><a href="#" class="trade-link">Trade</a></span>
     `;
@@ -39,54 +39,46 @@ function createCoinHTML(coin, mode) {
 
   if (mode === "topGainers") {
     return `
-      <a href="a" class="coin-row">
-        <div class="coin-row--left">
-          <div class="coins-symbol">
-            <img src="${coin.iconUrl}" alt="${
-      coin.name
-    }" width="16" height="16" />
-            <span class="coin-symbol">${coin.symbol}</span>
-            <span class="coin-name">${coin.name}</span>
-          </div>
-          <span class="coin-price">$${Number(coin.price).toFixed(2)}</span>
-        </div>
-        <div class="coin-row--right">
-          <span class="coin-views">28M</span>
-          <span class="coin-changes">${coin.change}%</span>
-        </div>
+      <a href="#" class="coin-row">
+        ${baseCoinRow(coin, price, `<span class="coin-views">28M</span>`)}
       </a>
     `;
   }
 }
 
-export async function fetchCrypto(ulId, startIndex, count, mode) {
-  ulId.innerHTML = `<li style="color:#999">Loading...</li>`;
+function getChangeClass(value) {
+  return value > 0 ? "positive" : "negative";
+}
 
+export function fetchCrypto(ulId, startIndex, count, mode) {
+  ulId.innerHTML = "";
+
+  const fragment = document.createDocumentFragment();
+  const coins = coinCache.slice(startIndex, startIndex + count);
+
+  coins.forEach((coin) => {
+    const li = document.createElement("li");
+    if (mode === "live") li.className = "live-crypto--item";
+
+    li.innerHTML = createCoinHTML(coin, mode);
+
+    li.querySelectorAll(".coin-changes").forEach((el) => {
+      const num = Number(el.innerText.replace("%", "")) || 0;
+      el.classList.add(getChangeClass(num));
+    });
+
+    fragment.appendChild(li);
+  });
+
+  ulId.appendChild(fragment);
+}
+
+export async function loadCoins() {
   try {
     const res = await fetch("https://api.coinranking.com/v2/coins");
     const data = await res.json();
-
-    ulId.innerHTML = "";
-
-    for (let i = startIndex; i < startIndex + count; i++) {
-      const coin = data.data.coins[i];
-      const li = document.createElement("li");
-
-      if (mode === "live") {
-        li.className = "live-crypto--item";
-      }
-
-      li.innerHTML = createCoinHTML(coin, mode);
-      ulId.appendChild(li);
-
-      const changeEls = li.querySelectorAll(".coin-changes");
-      changeEls.forEach((el) => {
-        const num = Number(el.innerText.replace("%", ""));
-        el.style.color = num > 0 ? "#16bb8e" : "#f44465";
-      });
-    }
+    coinCache = data.data.coins;
   } catch (err) {
-    ulId.innerHTML = `<li style="color:#f44465">Error loading data</li>`;
-    console.error("Error fetching data:", err);
+    console.error("API Error:", err);
   }
 }
